@@ -28,6 +28,13 @@ module.exports = {
           filename: 'images/[hash:6][ext]',
         },
       },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/font-[name].[hash:6][ext]',
+        },
+      },
     ],
   },
   mode: 'development',
