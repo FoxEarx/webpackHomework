@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -45,6 +46,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
     ],
   },
   mode: 'development',
@@ -58,4 +63,8 @@ module.exports = {
     port: 3000, // 端口号
     open: true,
   },
+  plugins: [
+    // 请确保引入这个插件！
+    new VueLoaderPlugin(),
+  ],
 }
