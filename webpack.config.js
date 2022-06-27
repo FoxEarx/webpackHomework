@@ -5,17 +5,12 @@ module.exports = {
     path: path.resolve(__dirname, 'lib'),
     filename: 'index.js',
   },
-  //   module: {
-  //     rules: [
-  //       // ... 其它规则
-  //       {
-  //         test: /\.vue$/,
-  //         loader: 'vue-loader',
-  //       },
-  //     ],
-  //   },
-  //   plugins: [
-  //     // 请确保引入这个插件！
-  //     new VueLoaderPlugin(),
-  //   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 }
