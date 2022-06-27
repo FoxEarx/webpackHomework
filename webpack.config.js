@@ -44,4 +44,8 @@ module.exports = {
       filename: 'index.html',
     }),
   ],
+  devServer: {
+    port: 3000, // 端口号
+    open: true,
+  },
 }
